@@ -31,7 +31,7 @@ func Routes() {
 	http.HandleFunc("/tutorials", Tutorials)
 	http.HandleFunc("/about", About)
 	http.HandleFunc("/contact", Contact)
-	if err := http.ListenAndServe(":8080", nil); err != nil{
+	if err := http.ListenAndServe(port(), nil); err != nil{
 		fmt.Println(err)
 	}
 }
