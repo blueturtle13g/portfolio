@@ -1,0 +1,56 @@
+{{ template "header.gohtml" .}}
+<br>
+  <div class="container">
+    {{ if .Cong }}
+    <div class="center alert alert-success" role="alert">
+      <h6>{{ .Cong }}</h6>
+    </div>
+    {{ else if .Errs }}
+    <div class="center alert alert-danger" role="alert">
+      {{ range .Errs }}
+      <ul>
+        <li><h6>{{ . }}</h6></li>
+      </ul>
+    </div>
+      {{ end }}
+    {{ end }}
+
+        <br>
+    <div class="row main">
+      <div class="main-login main-center">
+        <form class="form-horizontal" method="post">
+          <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Name</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span id="nameIcon" class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                <input id="name" type="text" class="form-control" name="name" {{if .Name }} value="{{.Name}}" {{end}} placeholder="Enter your Name" required/>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="cols-sm-2 control-label">Email</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                <input type="email" class="form-control" name="email" id="email" {{ if .Email }} value="{{ .Email }}" {{end}}  placeholder="Enter your Email" required/>
+              </div>
+            </div>
+          </div>
+              <div class="form-group">
+                  <label for="message" class="cols-sm-2 control-label">Leave us a message.</label>
+                  <div class="cols-sm-10">
+                      <div class="input-group">
+                          <textarea name="text" class="form-control" rows="8" cols="80" placeholder="Your Message..." required> {{if .Text }} {{.Text}} {{end}}</textarea>
+                      </div>
+                  </div>
+              </div>
+          <div class="login-register">
+            <input class="btn btn-primary" type="submit" value="Send">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{{ template "footer.gohtml"}}

@@ -1,0 +1,133 @@
+.picBack{
+  width: 100px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid white;
+
+}
+
+.card-header{
+  text-align: center;
+}
+
+#aboutBack{
+  background-image: url("/static/pic/lang-logo.png");
+}
+
+.aboutText{
+  width: 600px;
+  background: #e9ecef;
+}
+/*for alerts*/
+.alertBox {
+  z-index: 10;
+  display: none;
+  color: white;
+  top: 20%;
+  background-color: #1d2322f5;
+  position: fixed;
+  width: 300px;
+  left: 50%;
+  margin-left: -100px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+}
+.alertBox button {
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+.alertBox .yes {
+  background-color: #bd0606;
+}
+.alertBox .no {
+  background-color: #2b4f8e;
+}
+.alertBox .message {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: #273a3a;
+  border-radius: 5px;
+}
+/*end of alerts*/
+
+body {
+  font-family: 'Cuprum', sans-serif;
+  margin: 0;
+  background-color: #C0C0C0;
+}
+
+.topnav {
+  font-family: 'Merienda', cursive;
+  overflow: hidden;
+  background-color: #323235;
+}
+
+.center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-horizontal{
+  max-height: 450px;
+}
+
+p{
+  font-size: 19px;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.topnav a.active{
+  background-color: whitesmoke;
+  color: black;
+}
+.topnav a:hover {
+  background-color: rgba(206, 206, 206, 0.86);
+  color: black;
+}
+
+
+.main-login{
+  background-color: #fff;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 330px;
+  padding: 40px 40px;
+}
+
+.login-button{
+  margin-top: 5px;
+}
+
+.login-register{
+  font-size: 11px;
+  text-align: center;
+}

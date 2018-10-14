@@ -1,0 +1,31 @@
+<div id="confirmBox" class="alertBox" >
+    <div class ="message" ></div>
+    <button class ="yes" >Yes</button>
+    <button class ="no" >No</button>
+</div>
+<div id="textBox" class="alertBox" >
+    <div class ="message"></div>
+    <textarea class="rounded" cols="30" rows="10"></textarea>
+    <button class ="send no" >Send</button>
+    <button class ="cancel yes" >Cancel</button>
+</div>
+<div id="errBox" class="alertBox" >
+    <div class ="message" ></div>
+    <button class ="no" >OK</button>
+</div>
+
+<script>
+    jQuery(document).ready(function($){
+        // for alerts
+        function errAlert(msg) {
+            let errBox = $("#errBox");
+            errBox.find(".message").html(msg);
+            errBox.find(".no").unbind().click(function () {
+                $("#confirmBox").hide();
+                errBox.hide();
+            });
+        }
+    });
+</script>
+</body>
+</html>
